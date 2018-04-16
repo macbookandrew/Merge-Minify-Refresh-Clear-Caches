@@ -16,3 +16,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+include_once 'class-merge-minify-refresh-clear-caches.php';
