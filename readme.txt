@@ -1,4 +1,4 @@
-=== Merge Minify Refresh Clear Caches ===
+=== Merge + Minify + Refresh Clear Caches ===
 Contributors: macbookandrew
 Donate link: https://www.paypal.me/AndrewRMinionDesign
 Tags: speed, performance, caches, merge minify refresh, cloudflare, wp super cache
