@@ -10,7 +10,7 @@ echo "Default values are in brackets - just hit enter to accept them."
 echo
 
 # Set default pluginslug
-default_pluginslug="merge-minify-refresh-flush-caches"
+default_pluginslug="merge-minify-refresh-clear-caches"
 
 # Get some user input
 # Can't use the -i flag for read, since that doesn't work for bash 3
@@ -133,12 +133,7 @@ svn checkout $SVNURL $SVNPATH --depth immediates
 svn update --quiet $SVNPATH/trunk --set-depth infinity
 
 echo "Ignoring GitHub-specific and build files"
-svn propset svn:ignore "README.md
-Thumbs.db
-.git
-.gitignore
-package.json
-Gruntfile.js" "$SVNPATH/trunk/"
+svn propset svn:ignore -F .distignore "$SVNPATH/trunk/"
 
 echo "Exporting the HEAD of master from git to the trunk of SVN"
 git checkout-index -a -f --prefix=$SVNPATH/trunk/
