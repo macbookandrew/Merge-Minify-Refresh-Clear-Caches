@@ -82,6 +82,12 @@ class Merge_Minify_Refresh_Clear_Caches {
 			$response        .= $cloudflare_hooks->purgeCacheEverything();
 		}
 
+		// Clear entire RunCloud Hub cache.
+		if ( is_plugin_active( 'runcloud-hub/runcloud-hub.php' ) ) {
+			$response .= '<li>RunCloud Hub</li>';
+			$response .= wp_cache_flush() ? 'Cleared cached' : 'Failed to clear cache';
+		}
+
 		$response .= '</ul>
 		<p>Don&rsquo;t see a cache you expected? Submit a request&mdash;or better yet, a pull request&mdash;<a href="https://github.com/macbookandrew/Merge-Minify-Refresh-Clear-Caches">on GitHub</a>.</p>';
 
