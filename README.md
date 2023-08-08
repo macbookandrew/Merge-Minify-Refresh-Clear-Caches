@@ -3,8 +3,8 @@
 **Donate link:** https://www.paypal.me/AndrewRMinionDesign  
 **Tags:** speed, performance, caches, merge minify refresh, cloudflare, wp super cache  
 **Requires at least:** 4.4  
-**Tested up to:** 4.9.5  
-**Stable tag:** 1.0.0  
+**Tested up to:** 6.0.5  
+**Stable tag:** 1.1.0  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -31,5 +31,8 @@ Unfortunately not, since at this point, there’s no way to know which pages wil
 
 ## Changelog ##
 
-### 1.0 ###
+### 1.1.0 ###
+* Add support for RunCloud Hub object cache
+
+### 1.0.0 ###
 * First version
