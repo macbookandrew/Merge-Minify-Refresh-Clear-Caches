@@ -1,5 +1,5 @@
 # Merge + Minify + Refresh Clear Caches #
-**Contributors:** macbookandrew  
+**Contributors:** [macbookandrew](https://profiles.wordpress.org/macbookandrew/)  
 **Donate link:** https://www.paypal.me/AndrewRMinionDesign  
 **Tags:** speed, performance, caches, merge minify refresh, cloudflare, wp super cache  
 **Requires at least:** 4.4  
