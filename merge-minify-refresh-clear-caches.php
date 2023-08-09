@@ -7,7 +7,7 @@
  * Author URI:      https://andrewrminion.com/
  * Text Domain:     merge-minify-refresh-clear-caches
  * Domain Path:     /languages
- * Version:         1.1.0
+ * Version:         1.1.1
  *
  * @package         Merge_Minify_Refresh_Clear_Caches
  */

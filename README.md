@@ -4,7 +4,7 @@
 **Tags:** speed, performance, caches, merge minify refresh, cloudflare, wp super cache  
 **Requires at least:** 4.4  
 **Tested up to:** 6.0.5  
-**Stable tag:** 1.1.0  
+**Stable tag:** 1.1.1  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -30,6 +30,9 @@ Note that every time the Merge + Minify + Refresh cache is purged, your page cac
 Unfortunately not, since at this point, there’s no way to know which pages will be affected by the minified files.
 
 ## Changelog ##
+
+### 1.1.1 ###
+* Fix wordpress.org autodeployment
 
 ### 1.1.0 ###
 * Add support for RunCloud Hub object cache
