@@ -77,9 +77,21 @@ class Merge_Minify_Refresh_Clear_Caches {
 		// Clear all CloudFlare cache files.
 		// Listed after WP plugins since they should be cleared first.
 		if ( is_plugin_active( 'cloudflare/cloudflare.php' ) ) {
-			$response        .= '<li>CloudFlare</li>';
-			$cloudflare_hooks = new \CF\WordPress\Hooks();
-			$response        .= $cloudflare_hooks->purgeCacheEverything();
+			$response .= '<li>CloudFlare</li>';
+
+			$cloudflare_hooks = null;
+			if ( class_exists( '\Cloudflare\APO\WordPress\Hooks' ) ) {
+				$cloudflare_hooks = new \Cloudflare\APO\WordPress\Hooks();
+			} elseif ( class_exists( '\CF\WordPress\Hooks' ) ) {
+				$cloudflare_hooks = new \CF\WordPress\Hooks();
+			}
+
+			if ( null === $cloudflare_hooks ) {
+				$response .= 'CloudFlare plugin not found';
+			} else {
+				$cloudflare_hooks->purgeCacheEverything();
+				$response .= 'Cleared CloudFlare cache';
+			}
 		}
 
 		// Clear entire RunCloud Hub cache.
